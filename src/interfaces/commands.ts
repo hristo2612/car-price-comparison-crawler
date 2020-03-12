@@ -2,7 +2,7 @@ export interface ICommands {
   commands: ICommand[]
 }
 
-interface ICommand {
+export interface ICommand {
   goto?: INavigation;
   mouse?: IMouse;
   keyboard?: IKeyboard;
