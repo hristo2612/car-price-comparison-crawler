@@ -13,10 +13,29 @@ const firstWebsite: ICommands = {
       }
     },
     {
-      goto: {
-        url: 'http://mobile.fr/'
+      wait: {
+        milliseconds: 4000
       }
     },
+    {
+      mouse: {
+        click: {
+          selector: 'button#qssub'
+        }
+      }
+    },
+    {
+      wait: {
+        milliseconds: 4000
+      }
+    },
+    {
+      evaluate: {
+        callback: () => {
+          return document.title;
+        }
+      }
+    }
   ]
 };
 
@@ -25,6 +44,18 @@ const secondWebsite: ICommands = {
     {
       goto: {
         url: 'https://www.mobile.bg'
+      }
+    },
+    {
+      wait: {
+        milliseconds: 4000
+      }
+    },
+    {
+      evaluate: {
+        callback: () => {
+          return document.title;
+        }
       }
     }
   ]
